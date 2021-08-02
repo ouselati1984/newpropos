@@ -1,23 +1,35 @@
 import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import ItemList from './compo/ItemList';
+
+import { Component } from 'react';
 
 function App() {
+
+  const ItemArray = [
+  {
+imgsrc :`https://www.apple.com/newsroom/images/product/iphone/standard/Apple_announce-iphone12pro_10132020.jpg.landing-big_2x.jpg`,
+name :`IPHONE 12`,
+price :`1255,49$`,
+  },
+  {
+imgsrc :`https://lh3.googleusercontent.com/3oKnbxCaRs6Oz2u9-tXQC0LCtdcu0OgXU9SpcUGBgtMu9xbVQ7sfhxif0zoQyQ7Ky6LrpIIp_C95OomncZ7jKro4_g=w640-h400-e365-rj-sc0x00ffffff`,
+name :`BMW `,
+price :`1255,49 $`
+
+
+  },
+
+
+
+]
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+  <ItemList ItemArray={ItemArray} />
+
     </div>
   );
 }
